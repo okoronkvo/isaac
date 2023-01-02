@@ -1,0 +1,23 @@
+//just some line to work with
+contract New {
+    OtherContract other;
+    uint myNumber;
+
+    // Function mutability must be specified.
+    function someInteger() internal pure returns (uint) { return 2; }
+
+    // Function visibility must be specified.
+    // Function mutability must be specified.
+    function f(uint x) public returns (bytes memory) {
+        // The type must now be explicitly given.
+        uint z = someInteger();
+        x += z;
+        // Throw is now disallowed.
+        require(x <= 100);
+        int y = -3 >> 1;
+        require(y == -2);
+        do {
+            x += 1;
+            if (x > 10) continue;
+            // 'Continue' jumps to the condition below.
+        } while (x < 11);
